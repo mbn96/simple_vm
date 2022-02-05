@@ -1,0 +1,16 @@
+#REGISTERS:
+    total of 17 (16 64-bit normal registers and 1 8-bit compare register)
+    normal regs:
+        R(1-13) general purpose.
+        sp , bp , ip
+
+
+#Instructions topology:
+    16-bit instructions written on rom:
+        6-bit instruction-code | 2-bit src-mode | 4-bit dst-reg | 4-bit src-reg(if instructed by src-mode)
+    96-bit(5 * 16-bit) instructions written on rom:
+        6-bit instruction-code | 2-bit src-mode | 4-bit dst-reg | 4-bit empty | 64-bit(4 * 16-bit) src
+
+
+#RAM:
+    total of 512KB(64K * 8byte) memory.
