@@ -1,0 +1,42 @@
+#INSTRUCTIONS:
+    add     register , (register | memory | constant | static-var)
+    addf    ..
+    sub     ..
+    subf    ..
+    mult    ..
+    multf   ..
+    div     ..
+    divf    ..
+
+    mov     ..
+
+    and     ..
+    or      ..
+    xor     ..
+    not     ..
+
+    push    (register | memory | constant | static-var)
+    pop     register
+
+    comeq   register , (register | memory | constant | static-var)
+    comgr   ..
+    comle   ..
+    comneq  ..
+    jmp     (register | memory | constant | static-var)
+
+    call    .func-name
+    ret
+
+    halt
+    exit
+
+#PARAMS:
+    register: Rn  n=(1-16)
+    memory: M(64-bit Int)
+    constant: $(64-bit Int)
+    static-var: .(var-name)
+
+
+#FUNCTIONS:
+    .func-name:
+        INSTRUCTIONS
